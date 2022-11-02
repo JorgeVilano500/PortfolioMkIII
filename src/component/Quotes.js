@@ -7,7 +7,15 @@ function Quotes() {
     const [header, setHeader] = useState('')
 
     useEffect(() => {
+
+        async function fetchKanyeQuote() {
+            let yeRes = await fetch('https://api.kanye.rest');
+            let yeResult = await yeRes.json();
+            let quote = yeResult.quote;
+            return quote;     
+        }
         async function fetchQuote() {
+            let quote = await fetchKanyeQuote();
             let res = await fetch('https://test-javswebsite.herokuapp.com/getQuote', {
                 method: 'post', 
                 header: {
@@ -18,8 +26,10 @@ function Quotes() {
             let result = await res.json();
 
             if(result.msg === 'empty') {
-                setHeader('Gone For The Day')
-                setQuote('No Quote For Today');
+               
+                // console.log(yeResult)
+                setHeader('Kanye West')
+                setQuote(quote);
             } else if(result) {
                 setQuote(result[0].quote)
                 setHeader(result[0].header)
@@ -27,7 +37,7 @@ function Quotes() {
 
         }
         fetchQuote();
-    })
+    }, [])
 
   return (
     <div className='card w-50 h-50 m-auto mt-5 mb-5' style={{backgroundColor: 'rgba( 255, 255, 255, 0.18 )'}}>

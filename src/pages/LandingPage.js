@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { useStateContext } from '../context/UserContext';
 import Quotes from '../component/Quotes';
 import GlobalChat from '../component/GlobalChat';
+import Clock from '../component/Clock';
 
 function LandingPage() {
   const { loginStatus } = useStateContext();
@@ -23,8 +24,11 @@ function LandingPage() {
               
               {loginStatus ? (<div>
                 <h1>Hello {loginStatus}</h1>
+                <Clock />
               </div>) : (
-                <h3 >Welcome To My Site</h3>
+                <div>
+                  <h3 >Welcome To My Site</h3>
+                  </div>                
               )}
               <h5 className='my-5'>Take a Look Around And Email Me For Inquiries</h5>
               </div>

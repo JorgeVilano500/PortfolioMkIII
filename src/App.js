@@ -1,4 +1,5 @@
 import './App.css';
+import { useContext } from 'react';
 import Navbar from './component/Navbar';
 import {Route, Routes} from 'react-router-dom'
 import LandingPage from './pages/LandingPage';
@@ -10,10 +11,17 @@ import axios from 'axios';
 import {BlogContext} from './context/BlogContext'
 import MobileNavbar from './component/MobileNavbar';
 import AboutMe from './component/AboutMe';
+import CalendarComponent from './component/Calendar';
+import WeatherPage from './pages/Weather';
+import SocialMedia from './pages/SocialMedia';
+import {TransactionProvider} from './context/TransactionContext';
+import Footer from './component/Footer';
+import Resume from './component/Resume';
 
 axios.defaults.withCredentials = true;
 
 const App = () => {
+
   return (
     <div className="App">
       <header className="App-header">
@@ -41,7 +49,16 @@ const App = () => {
           <Route exact path='/Register' element={<Register />} />
           <Route exact path='/Kanban' element={<Kanban />} />
           <Route exact path='/AboutMe' element={<AboutMe />} />
+          <Route exact path='/Calendar' element={<CalendarComponent />} />
+          <Route exact path='/Weather' element={<WeatherPage />} />
+          <Route exact path='/Resume' element={<Resume />} />
+          <Route exact path='/Media' element={
+            <TransactionProvider>
+              <SocialMedia />
+            </TransactionProvider>
+          } />
       </Routes>
+      <Footer />
       </header>
     </div>
   );

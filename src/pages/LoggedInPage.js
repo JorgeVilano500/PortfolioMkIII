@@ -2,6 +2,7 @@ import React from 'react'
 import AddBlog from '../component/AddBlog';
 import AddQuote from '../component/AddQuote';
 import GlobalChat from '../component/GlobalChat';
+import AddCalendarItem from '../component/AddCalendarItem';
 import { useStateContext } from '../context/UserContext'
 
 function LoggedInPage() {
@@ -20,6 +21,7 @@ function LoggedInPage() {
         </div>
         <div className='col mt-5' style={{height: '100%'}}> 
            <GlobalChat />
+           <AddCalendarItem />
         </div>
     </div>
   )
