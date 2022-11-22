@@ -27,7 +27,8 @@ function LandingPage() {
                 <Clock />
               </div>) : (
                 <div>
-                  <h3 >Welcome To My Site</h3>
+                  <h3 >Welcome To My Site, spend some Time here</h3>
+                  <Clock />
                   </div>                
               )}
               <h5 className='my-5'>Take a Look Around And Email Me For Inquiries</h5>

@@ -37,9 +37,9 @@ function Navbar() {
                  </button>
                  <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                    <Link className='dropdown-item' to='/Calendar'>Calendar</Link>
-                   <a className="dropdown-item" href="#">Another action</a>
+                   <Link className="dropdown-item" to='/Kanban'>Kanban</Link>
                    <div className="dropdown-divider"></div>
-                   <a className="dropdown-item" href="#">Something else here</a>
+                   <Link className="dropdown-item" to="/Goals">Daily Goals/Reminders</Link>
                  </div>
                </li>
                ) :''}

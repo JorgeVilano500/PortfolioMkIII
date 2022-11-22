@@ -15,11 +15,11 @@ Axios.defaults.withCredentials = true;
 // root.render()    
 
 ReactDOM.render(
-    <React.StrictMode><UserContext>
     <BrowserRouter> 
+    <UserContext>
         <App />
-    </BrowserRouter>
-    </UserContext></React.StrictMode>, 
+    </UserContext> 
+    </BrowserRouter>,
     document.getElementById('root')
 )
 

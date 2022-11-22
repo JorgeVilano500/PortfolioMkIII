@@ -53,6 +53,7 @@ export const UserContext = ({children}) => {
             console.log(response);
             if(response.data.loggedIn === true) {
                     setLoginStatus(response.data.user[0].username)
+                    setUsername(response.data.user[0].username)
                     // window.location.reload('/')
             }
         })

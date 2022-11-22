@@ -1,7 +1,7 @@
 import './App.css';
 import { useContext } from 'react';
 import Navbar from './component/Navbar';
-import {Route, Routes} from 'react-router-dom'
+import {Route, Routes, Navigate} from 'react-router-dom'
 import LandingPage from './pages/LandingPage';
 import PublicBlogs from './pages/PublicBlogs';
 import Login from './pages/Login';
@@ -17,6 +17,9 @@ import SocialMedia from './pages/SocialMedia';
 import {TransactionProvider} from './context/TransactionContext';
 import Footer from './component/Footer';
 import Resume from './component/Resume';
+import Spotify from './pages/Spotify';
+import Goals from './pages/Goals';
+
 
 axios.defaults.withCredentials = true;
 
@@ -57,6 +60,9 @@ const App = () => {
               <SocialMedia />
             </TransactionProvider>
           } />
+          <Route exact path='/Spotify' element={<Spotify />} />
+          <Route exact path='/Goals' element={<Goals />} />
+          <Route path='*' element={<Navigate to='/' />} /> 
       </Routes>
       <Footer />
       </header>

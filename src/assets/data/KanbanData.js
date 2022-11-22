@@ -1,40 +1,48 @@
-export const kanbanGrid =[
-    {
-    headerText: 'To Do', 
-    keyField: 'Open', 
-    allowToggle: true
-}, 
-{
-    headerText: 'In Progress', 
-    keyField: 'InProgress', 
-    allowToggle: true
-}, 
-{
-    headerText: 'Testing', 
-    keyField: 'Testing', 
-    allowToggle: false,
-    isExpanded: false
-},
-{
-    headerText: 'Done', 
-    keyField: 'Close', 
-    allowToggle: true
-}
-]
+import {v4 as uuidv4} from 'uuid';
 
-export const kanbanData = [
+export const mockData =[
     {
-        Id: 'Task 1', 
-        Title: 'Task - 29001',
-        Status: 'Open', 
-        Summary: 'Analyze the new requirements gathered from the customer', 
-        Type: 'Story', 
-        Priority: 'Low', 
-        Tags: 'Analyze,Customer', 
-        Estimate: 3.5, 
-        Assignee: 'Nancy Davloio', 
-        RankId: 1, 
-        Color: '#02897B', 
-        className: 'e-story, e-low, e-nancy-davloio'
+        id: uuidv4(), 
+        title: ' To do',
+        tasks: [
+            {
+                id: uuidv4(), 
+                title: 'Learn JS'
+            },
+            {
+                id: uuidv4(), 
+                title: 'learn git'
+            },{
+                id: uuidv4(), 
+                title: 'learn Python'
+            },
+        ]
+    }, 
+    {
+        id: uuidv4(), 
+        title: 'In progress', 
+        tasks: [
+            {
+                id: uuidv4(), 
+                title: 'learn golang'
+            }, 
+            {
+                id: uuidv4(), 
+                title: 'learn something'
+            },{
+                id: uuidv4(), 
+                title: 'learn idk'
+            }
+        ]
+    },
+    {
+        id: uuidv4(), 
+        title: 'Completed', 
+        tasks: [
+            {
+                id: uuidv4(), 
+                title: 'Finish html'
+            }
+        ]
     }
 ]

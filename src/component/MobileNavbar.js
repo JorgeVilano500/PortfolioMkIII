@@ -31,11 +31,11 @@ function MobileNavbar() {
             {loginStatus ? (
                  <li className="nav-item dropdown mt-2">
                  <button  className="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                   Dropdown
+                   More Features
                  </button>
                  <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                   <a className="dropdown-item" href="#">Action</a>
-                   <a className="dropdown-item" href="#">Another action</a>
+                   <Link className="dropdown-item" to='/Calendar'>Calendar</Link>
+                   <Link className="dropdown-item" to='/Kanban'>Kanban</Link>
                    <div className="dropdown-divider"></div>
                    <a className="dropdown-item" href="#">Something else here</a>
                  </div>

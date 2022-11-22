@@ -142,13 +142,7 @@ export const TransactionProvider = ({children}) => {
          
             // , {value: txFee._hex}
 //, {value: ethers.utils.parseEther(txFee)}
-            const transactionHash = await transactionContract.addToBlockchain(addressTo, parsedAmount, message, keyword);
-            setIsLoading(true);
-            console.log(`loading - ${transactionHash.hash}`);
-            await transactionHash.wait();
-            setIsLoading(false);
-            console.log(`Success - ${transactionHash.hash}`);
-         
+           
 
             const transactionCount = await transactionContract.getTransactionCount();
 

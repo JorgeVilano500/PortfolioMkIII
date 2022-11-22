@@ -40,7 +40,7 @@ function AboutMe() {
             <p>I was going to attend UC Davis for my last year but unfortunately I had an injury that required me to get surgery. I am doing this in the meantime. </p>
         </section>
         <section className='aboutMe hidden'>
-            <h1>I'm Salvadorean and come from a low income neighborhood</h1>
+            <h1>I'm Salvadoran and come from a low income neighborhood</h1>
             <p>I didn't have many opportunities to learn about many skills that could help me out. However I found codecademy and the internet to be a great resource. I am a self taught coder</p>
         </section>
         <section className='aboutMe hidden'>
