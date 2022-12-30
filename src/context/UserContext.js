@@ -38,7 +38,7 @@ export const UserContext = ({children}) => {
             password: password
         }, { withCredentials: true}).then(response => {
             if(response.data.message) {
-                setLoginStatus(response.data.message)
+                setLoginStatus(response.data.message) 
                 // window.location.reload('/')
 
             }  else {

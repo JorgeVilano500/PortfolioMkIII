@@ -4,7 +4,7 @@ import { useStateContext } from '../context/UserContext'
 
 
 function PublicBlogs() {
-  const {loginStatus} = useStateContext();
+  const {loginStatus, username} = useStateContext();
   let [publicBlogs, setPublicBlogs] = useState([])
 
 
@@ -40,7 +40,7 @@ function PublicBlogs() {
     }
 
     
-    if(!loginStatus) {
+    if(username != 'Alejandro') {
       fetchPublicBlogs()
     } else{
       fetchPrivateBlogs();

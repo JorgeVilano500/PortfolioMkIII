@@ -5,6 +5,8 @@ import GlobalChat from '../component/GlobalChat';
 import AddCalendarItem from '../component/AddCalendarItem';
 import { useStateContext } from '../context/UserContext'
 import Clock from '../component/Clock';
+import AddToKanban from '../component/AddToKanban';
+import AddToMessageBoard from '../component/AddToMessageBoard';
 
 function LoggedInPage() {
     const {loginStatus, logout} = useStateContext();
@@ -20,10 +22,12 @@ function LoggedInPage() {
             <h1>Welcome back, {loginStatus}</h1>
             <Clock />
             <button onClick={() => logout()}>Log Out</button>
+            <AddToKanban />
         </div>
         <div className='col mt-5' style={{height: '100%'}}> 
            <GlobalChat />
            <AddCalendarItem />
+           <AddToMessageBoard />
         </div>
     </div>
   )

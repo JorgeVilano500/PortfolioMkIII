@@ -3,9 +3,11 @@ import './scss/Kanban.scss';
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
 import {mockData} from '../assets/data/KanbanData';
 import { Card } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 function KanbanUI() {
     const [data, setData] = useState([])
+    const navigate = useNavigate()
 
     const updateKanban = async (dat) => {
         let response = fetch('https://test-javswebsite.herokuapp.com/updateKanban', {
@@ -19,6 +21,9 @@ function KanbanUI() {
                 dat
             })
         })
+
+        // navigate('/Kanban')
+
     }
 
     const onDragEnd = result => {
@@ -101,7 +106,8 @@ function KanbanUI() {
                                                 }}
                                             >
                                              <Card>
-                                                {task.title}
+                                                {task.title} <br />
+                                                <p style={{fontSize: '10px'}}>{task.description}</p>
                                             </Card>
                                             </div>
                                           )}

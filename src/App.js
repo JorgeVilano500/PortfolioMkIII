@@ -12,6 +12,7 @@ import {BlogContext} from './context/BlogContext'
 import MobileNavbar from './component/MobileNavbar';
 import AboutMe from './component/AboutMe';
 import CalendarComponent from './component/Calendar';
+import AddToMessageBoard from './component/AddToMessageBoard';
 import WeatherPage from './pages/Weather';
 import SocialMedia from './pages/SocialMedia';
 import {TransactionProvider} from './context/TransactionContext';
@@ -19,7 +20,8 @@ import Footer from './component/Footer';
 import Resume from './component/Resume';
 import Spotify from './pages/Spotify';
 import Goals from './pages/Goals';
-
+import AddToKanban from './component/AddToKanban';
+import MessageList from './component/MessageList';
 
 axios.defaults.withCredentials = true;
 
@@ -49,7 +51,7 @@ const App = () => {
             <BlogContext>
               <Login />
               </BlogContext>} />
-          <Route exact path='/Register' element={<Register />} />
+          {/* <Route exact path='/Register' element={<Register />} /> */}
           <Route exact path='/Kanban' element={<Kanban />} />
           <Route exact path='/AboutMe' element={<AboutMe />} />
           <Route exact path='/Calendar' element={<CalendarComponent />} />
@@ -60,8 +62,10 @@ const App = () => {
               <SocialMedia />
             </TransactionProvider>
           } />
+          <Route exact path='/Test' element={<AddToMessageBoard />} />
           <Route exact path='/Spotify' element={<Spotify />} />
           <Route exact path='/Goals' element={<Goals />} />
+          <Route exact path='/MessageList' element={<MessageList />} />
           <Route path='*' element={<Navigate to='/' />} /> 
       </Routes>
       <Footer />

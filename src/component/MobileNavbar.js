@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import { useStateContext } from '../context/UserContext'
 
 function MobileNavbar() {
-  const {loginStatus} = useStateContext();
+  const {loginStatus, username} = useStateContext();
   return (
     <nav className='navbar navbar-expand-lg navbar-light '>
       <div className='container-fluid gradient-border mt-0' style={{background: 'rgba( 255, 255, 255, 0.18 )'}}>
@@ -28,6 +28,9 @@ function MobileNavbar() {
             <li className='nav-item dropdown'>
               <a><Link to='/Login'>Login</Link></a>
             </li>
+            {
+                  username != 'Liz' ? '' : <li className='nav-item m-2'><Link className='nav-link' to='/MessageList'>Messages</Link></li>
+                }
             {loginStatus ? (
                  <li className="nav-item dropdown mt-2">
                  <button  className="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">

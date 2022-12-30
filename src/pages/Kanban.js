@@ -1,5 +1,6 @@
 import React from 'react'
 import KanbanUI from '../component/KanbanUI'
+import KanbanHistory from '../component/KanbanHistory'
 
 function Kanban() {
   return (
@@ -8,6 +9,10 @@ function Kanban() {
         Kanban UI
       </h1>
       <KanbanUI />
+      <div>
+        <h3>Kanban History Tasks</h3>
+      <KanbanHistory />
+      </div>
     </div>
   )
 }
