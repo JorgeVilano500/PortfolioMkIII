@@ -22,6 +22,7 @@ import Spotify from './pages/Spotify';
 import Goals from './pages/Goals';
 import AddToKanban from './component/AddToKanban';
 import MessageList from './component/MessageList';
+import BucketList from './pages/BucketList';
 
 axios.defaults.withCredentials = true;
 
@@ -66,6 +67,7 @@ const App = () => {
           <Route exact path='/Spotify' element={<Spotify />} />
           <Route exact path='/Goals' element={<Goals />} />
           <Route exact path='/MessageList' element={<MessageList />} />
+          <Route exact path='/BucketList' element={<BucketList />} />
           <Route path='*' element={<Navigate to='/' />} /> 
       </Routes>
       <Footer />

@@ -17,9 +17,9 @@ function SocialMedia() {
                 Click to open Websites
                 <CircularGrid />
             </div>
-            <div className='col'>
+            {/* <div className='col'>
                 Placement for gifs when transactions are made
-            </div>
+            </div> */}
         </div>
     </div>
   )

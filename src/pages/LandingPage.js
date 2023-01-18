@@ -16,7 +16,7 @@ function LandingPage() {
         <div className='col-xl-6 col-xxl-4 col-lg-6 col-md-12 m-0 p-0 mb-5 h-75 '>
           {/* <h1>Daily Quotes + Global Chat</h1> */}
             <Quotes />
-            <GlobalChat />
+            {/* <GlobalChat /> */}
         </div>
         <div className='col-xl-6 col-xxl-4 col-lg-6 col-md-12  m-0 p-0 align-self-center align-items-center justify-content-center mt-5' >
           {/* <h1>Main Board... Maybe some animation</h1> */}
@@ -61,11 +61,11 @@ function LandingPage() {
               <p>Local Temp: city + temp </p>
               <Link to='/Weather' className='btn btn-secondary w-50'>Check More</Link>
           </div>
-          <div className='card text-white w-50 h-25 m-auto mt-5 mb-5 align-self-center align-items-center' style={{backgroundColor: 'rgba( 255, 255, 255, 0.18 )'}}> 
+          {/* <div className='card text-white w-50 h-25 m-auto mt-5 mb-5 align-self-center align-items-center' style={{backgroundColor: 'rgba( 255, 255, 255, 0.18 )'}}> 
               <h3 className='card-header'>Recommend Songs</h3>
               <p>Add to My Spotify Playlist </p>
               <Link to='/Spotify' className='btn btn-secondary w-50'>Check More</Link>
-          </div>
+          </div> */}
           <div className='card text-white w-50 h-25 m-auto mt-5 mb-5 align-self-center align-items-center' style={{backgroundColor: 'rgba( 255, 255, 255, 0.18 )'}}> 
               <h3 className='card-header'>Social Media</h3>
               <p>Follow Me & Send Crypto</p>

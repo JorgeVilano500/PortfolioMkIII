@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import pdf from '../assets/pdfs/JAVSResume.pdf'
+import pdf from '../assets/pdfs/Resume.pdf'
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 
 
@@ -22,7 +22,7 @@ function Resume() {
     changePage(+1)
   }
   return (
-    <div className='container mb-5 mt-2' style={{height: '90vh'}}>
+    <div className='container mb-5 mt-2' style={{height: '100vh'}}>
         <div className='row'>
           <div className='col'>
           {
@@ -33,7 +33,7 @@ function Resume() {
           <div className='col'>
           <div className='justify-content-center'>
                 <Document file={pdf} onLoadSuccess={onDocumentLoadSuccess} onLoadError={console.error}>
-                <Page height='600' pageNumber={pageNumber} />
+                <Page height='1000' pageNumber={pageNumber} />
               </Document>
             </div>
           
