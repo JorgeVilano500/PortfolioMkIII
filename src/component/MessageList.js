@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import MessageCard from './MessageCard'
 import {useStateContext} from '../context/UserContext';
+import HaikuCard from './HaikuCard';
 
 
 function MessageList() {
@@ -45,10 +46,20 @@ function MessageList() {
             </> :  <div>
             <h1>Messages/Poems For Liz</h1>
 
-                <div className='ml-3'>
+                <div className='d-flex m-2'>
 
             {message.map((item, index) => (
                 <MessageCard
+                // should add item individually for the cards
+                title={item.messageHeader}
+                message={item.message}
+                messageType={item.messageType}
+                date={item.dateListed}
+                />
+                ) )}
+                <br></br>
+                 {haiku.map((item, index) => (
+                <HaikuCard
                 // should add item individually for the cards
                 title={item.messageHeader}
                 message={item.message}
