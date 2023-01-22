@@ -44,7 +44,7 @@ function WeeklyGoals({weeklyGoals, setWeeklyGoals}) {
         <table className='table table-dark w-50'>
           <thead>
             <tr>
-              <th colspan='7'>
+              <th colspan='9'>
               Weekly Goals Table 
               </th>
             </tr>
@@ -56,6 +56,8 @@ function WeeklyGoals({weeklyGoals, setWeeklyGoals}) {
               <th scope='col'>Vacuum</th>
               <th scope='col'>Meal Prep</th>
               <th scope='col'>Weekly Money Goal</th>
+              <th scope='col'>Post Liz on IG</th>
+              <th scope='col'>Post on JAVA Studios</th>
             </tr>
           </thead>
           <tbody>
@@ -81,6 +83,12 @@ function WeeklyGoals({weeklyGoals, setWeeklyGoals}) {
                 <td><input checked={checkNum(value.weekly_money_goal)} onClick={() => {
                    if(value.weekly_money_goal === 1) return
                   updateGoal(value.id, 'Weekly', 'weekly_money_goal')}} type='radio' /></td>
+                   <td><input checked={checkNum(value.post_liz)} onClick={() => {
+                   if(value.post_liz === 1) return
+                  updateGoal(value.id, 'Weekly', 'post_liz')}} type='radio' /></td>
+                   <td><input checked={checkNum(value.post_java_studios)} onClick={() => {
+                   if(value.post_java_studios === 1) return
+                  updateGoal(value.id, 'Weekly', 'post_java_studios')}} type='radio' /></td>
 
               </tr>
             ))}
