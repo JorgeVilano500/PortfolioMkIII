@@ -41,15 +41,17 @@ function DailyGoals({dailyGoals, setDailyGoals}) {
         <table className='table table-dark w-75'>
             <thead>
                 <tr>
-                    <th colSpan={13}>
+                    <th colSpan={20}>
                         Daily Goals Table
                     </th>
                 </tr>
                 <tr>
                     <th>Day</th>
                 <th scope='col'>Wake Up 6:30</th>
+                <th scope='col'>Brush Teeth (Morning)</th>
                 <th scope='col'>Make Bed</th>
                 <th scope='col'>Tidy Room</th>
+                <th scope='col'>Vitamins/Collagen</th>
                 <th scope='col'>No Phone(30 min)</th>
                 <th scope='col'>Sunscreen</th>
                 <th scope='col'>Sunshine (10min)</th>
@@ -58,6 +60,11 @@ function DailyGoals({dailyGoals, setDailyGoals}) {
                 <th scope='col'>Train Back</th>
                 <th scope='col'>Yoga</th>
                 <th scope='col'>Gym</th>
+                <th scope='col'>Codewars (30 min)</th>
+                <th scope='col'>Codecademy (30 min)</th>
+                <th scope='col'>Clean Princesses Poop</th>
+                <th scope='col'>Brush Princess</th>
+                <th scope='col'>Brush Teeth (Night)</th>
                 <th scope='col'>Bed By 11pm</th>
                 </tr>
             </thead>
@@ -73,6 +80,14 @@ function DailyGoals({dailyGoals, setDailyGoals}) {
                         onClick={() =>{
                             if(value.wake_up_early === 1)return; 
                             updateGoal(value.id, 'Daily', 'wake_up_early')
+                        }}
+                    />
+                </td> <td>
+                    <input type='radio'
+                        checked={checkNum(value.brush_teeth_morning)}
+                        onClick={() =>{
+                            if(value.brush_teeth_morning === 1)return; 
+                            updateGoal(value.id, 'Daily', 'brush_teeth_morning')
                         }}
                     />
                 </td>
@@ -95,6 +110,15 @@ function DailyGoals({dailyGoals, setDailyGoals}) {
                     }}
                     checked={checkNum(value.tidy_apartment)}
 />
+                </td>
+                <td>
+                    <input type='radio'
+                        checked={checkNum(value.daily_vitamins)}
+                        onClick={() =>{
+                            if(value.daily_vitamins === 1)return; 
+                            updateGoal(value.id, 'Daily', 'daily_vitamins')
+                        }}
+                    />
                 </td>
                 <td>
                     <input type='radio' 
@@ -174,6 +198,51 @@ function DailyGoals({dailyGoals, setDailyGoals}) {
 
                                             checked={checkNum(value.gym)}
 />
+                </td>
+                <td>
+                    <input type='radio'
+                        checked={checkNum(value.codewars)}
+                        onClick={() =>{
+                            if(value.codewars === 1)return; 
+                            updateGoal(value.id, 'Daily', 'codewars')
+                        }}
+                    />
+                </td>
+                <td>
+                    <input type='radio'
+                        checked={checkNum(value.codecademy)}
+                        onClick={() =>{
+                            if(value.codecademy === 1)return; 
+                            updateGoal(value.id, 'Daily', 'codecademy')
+                        }}
+                    />
+                </td>
+                <td>
+                    <input type='radio'
+                        checked={checkNum(value.princess_poop)}
+                        onClick={() =>{
+                            if(value.princess_poop === 1)return; 
+                            updateGoal(value.id, 'Daily', 'princess_poop')
+                        }}
+                    />
+                </td>
+                <td>
+                    <input type='radio'
+                        checked={checkNum(value.princess_brush)}
+                        onClick={() =>{
+                            if(value.princess_brush === 1)return; 
+                            updateGoal(value.id, 'Daily', 'princess_brush')
+                        }}
+                    />
+                </td>
+                <td>
+                    <input type='radio'
+                        checked={checkNum(value.brush_teeth_night)}
+                        onClick={() =>{
+                            if(value.brush_teeth_night === 1)return; 
+                            updateGoal(value.id, 'Daily', 'brush_teeth_night')
+                        }}
+                    />
                 </td>
                 <td>
                     <input type='radio' 

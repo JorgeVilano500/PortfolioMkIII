@@ -42,7 +42,7 @@ function LandingPage() {
               </div>
               <div className='carousel-item'>
                 <h1>Mom's Ecommerce Site</h1>
-                <a href='https://aidashandmadecreations.netlify.app/' target='_blank'><img src={momsEx} className='d-block w-100' /></a>
+                <a href='https://aidastest.herokuapp.com/' target='_blank'><img src={momsEx} className='d-block w-100' /></a>
               </div>
             </div>
             <button className='carousel-control-prev' type='button' data-bs-target='#carouselExampleControls' data-bs-slide='prev'>

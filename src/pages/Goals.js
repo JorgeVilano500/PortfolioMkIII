@@ -1,13 +1,16 @@
 import React, {useEffect, useState} from 'react'
 import DailyGoals from '../component/DailyGoals'
 import WeeklyGoals from '../component/WeeklyGoals'
+import {useStateContext} from '../context/UserContext';
 
 
 
 function Goals() {
+  const {username} = useStateContext();
   const [weeklyGoals, setWeeklyGoals] = useState([]);
   const [goals, setGoals] = useState([]);
   async function fetchDailyGoals() {
+    if(username !== 'Alejandro') return
     let response2 = await fetch('https://test-javswebsite.herokuapp.com/dailyGoals', {
       method: 'post', 
       headers: {
@@ -46,7 +49,11 @@ function Goals() {
 
   return (
     <div className='d-flex align-items-center justify-content-center row' >
-          <DailyGoals 
+        {username !== 'Alejandro' ? (
+          <h1>This Page is not open for public view</h1>
+        ) : (
+          <>
+            <DailyGoals 
             dailyGoals={goals}
             setDailyGoals={setGoals}
           />
@@ -58,6 +65,8 @@ function Goals() {
             setWeeklyGoals={setWeeklyGoals}
           />
       {/* </div> */}
+          </>
+        )}
     </div>
   )
 }
