@@ -165,3 +165,9 @@
 .haiku {
   background-image: url('./assets/haikubg.jpg');
 }
+
+.lizmessage {
+  background-image: url('./assets/messagebg.jpg');
+  
+  object-fit: cover;
+}

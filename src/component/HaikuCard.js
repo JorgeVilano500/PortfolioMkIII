@@ -8,7 +8,7 @@ function HaikuCard({title, message, messageType, date}) {
         <h5 class="card-title">{title}</h5>
         <h6 class="card-subtitle mb-2 text-muted">{messageType} : {date.slice(0, 10)}</h6>
         <p class="card-text" style={{background: '#fff', borderRadius: '10%'}}>{message}</p>
-    </div>
+    </div> 
     </div>
   )
 }

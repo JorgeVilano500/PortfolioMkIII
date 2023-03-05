@@ -40,7 +40,7 @@ function MobileNavbar() {
                    <Link className="dropdown-item" to='/Calendar'>Calendar</Link>
                    <Link className="dropdown-item" to='/Kanban'>Kanban</Link>
                    <div className="dropdown-divider"></div>
-                   <a className="dropdown-item" href="#">Something else here</a>
+                   <Link className="dropdown-item" href="/Goals">Something else here</Link>
                  </div>
                </li>
                ) :''}

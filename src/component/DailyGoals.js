@@ -46,12 +46,12 @@ function DailyGoals({dailyGoals, setDailyGoals}) {
                     </th>
                 </tr>
                 <tr>
-                    <th>Day</th>
+                    <th scope='col'>Day</th>
                 <th scope='col'>Wake Up 6:30</th>
                 <th scope='col'>Brush Teeth (Morning)</th>
                 <th scope='col'>Make Bed</th>
                 <th scope='col'>Tidy Room</th>
-                <th scope='col'>Vitamins/Collagen</th>
+                <th scope='col'>Vitamins</th>
                 <th scope='col'>No Phone(30 min)</th>
                 <th scope='col'>Sunscreen</th>
                 <th scope='col'>Sunshine (10min)</th>
@@ -60,12 +60,7 @@ function DailyGoals({dailyGoals, setDailyGoals}) {
                 <th scope='col'>Train Back</th>
                 <th scope='col'>Yoga</th>
                 <th scope='col'>Gym</th>
-                <th scope='col'>Codewars (30 min)</th>
-                <th scope='col'>Codecademy (30 min)</th>
-                <th scope='col'>Clean Princesses Poop</th>
-                <th scope='col'>Brush Princess</th>
-                <th scope='col'>Brush Teeth (Night)</th>
-                <th scope='col'>Bed By 11pm</th>
+              
                 </tr>
             </thead>
             
@@ -199,7 +194,26 @@ function DailyGoals({dailyGoals, setDailyGoals}) {
                                             checked={checkNum(value.gym)}
 />
                 </td>
-                <td>
+                
+
+            </tr>
+            ))}
+
+            <tr>
+                <th></th>
+            <th scope='col'>Codewars (30 min)</th>
+                <th scope='col'>Codecademy (30 min)</th>
+                <th scope='col'>Clean Princesses Poop</th>
+                <th scope='col'>Brush Princess</th>
+                <th scope='col'>Brush Teeth (Night)</th>
+                <th scope='col'>Bed By 11pm</th>
+            </tr>
+
+            {
+                dailyGoals.map((value, index) => (
+                    <tr>
+                         <th scope='row'>{value.id}</th>
+<td>
                     <input type='radio'
                         checked={checkNum(value.codewars)}
                         onClick={() =>{
@@ -254,9 +268,9 @@ function DailyGoals({dailyGoals, setDailyGoals}) {
                                             checked={checkNum(value.bed_early)}
 />
                 </td>
-
-            </tr>
-            ))}
+                    </tr>
+                ))
+            }
       
             </tbody>
               

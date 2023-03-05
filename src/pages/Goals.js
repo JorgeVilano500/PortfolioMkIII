@@ -10,7 +10,6 @@ function Goals() {
   const [weeklyGoals, setWeeklyGoals] = useState([]);
   const [goals, setGoals] = useState([]);
   async function fetchDailyGoals() {
-    if(username !== 'Alejandro') return
     let response2 = await fetch('https://test-javswebsite.herokuapp.com/dailyGoals', {
       method: 'post', 
       headers: {
@@ -24,6 +23,7 @@ function Goals() {
     // console.log(goals)
   }
   useEffect(()=> {
+    // if(username !== 'Alejandro') returnnp
     fetchDailyGoals()
     
     async function fetchWeeklyGoals() {
